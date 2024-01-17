@@ -85,7 +85,7 @@ private object PostgresDialect extends JdbcDialect {
   }
 
   override def getTableExistsQuery(table: String): String = {
-    s"SELECT 1 FROM $table LIMIT 1"
+    s"SELECT 1 FROM $table WHERE 1=0"
   }
 
   /**
